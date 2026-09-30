@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Pelatihan Pemasaran Digital dan Promosi Pariwisata bagi ASN</title>
+<style>
+:root{--bg:#fff;--fg:#1D2B2A;--card:#E6F2EF;--head:#0B3B3C;--mid:#1F7A6B;--acc:#F2A43A;--mut:#5B6B69;--brk:#EEF1F0;
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0e1818;--fg:#E8F1EF;--card:#163130;--head:#9ADBCF;--mid:#2FA08C;--mut:#9FB3B0;--brk:#132524}}
+:root[data-theme="dark"]{--bg:#0e1818;--fg:#E8F1EF;--card:#163130;--head:#9ADBCF;--mid:#2FA08C;--mut:#9FB3B0;--brk:#132524}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+html,body{height:100%;margin:0}
+body{background:var(--bg);color:var(--fg);font-family:Calibri,"Segoe UI",Arial,sans-serif;overflow:hidden}
+#deck{height:100%;overflow:hidden;position:relative}
+#track{display:flex;height:100%;transition:transform .6s cubic-bezier(.65,0,.25,1)}
+.s{flex:0 0 100%;height:100%;overflow-y:auto;box-sizing:border-box;padding:22px 20px 96px}
+.w{max-width:760px;margin:0 auto}
+.dk{background:#0B3B3C;color:#fff;position:relative}
+h1,h2{font-family:Cambria,Georgia,serif;margin:0 0 16px;color:var(--head)}
+h2{font-size:clamp(26px,6vw,36px)}
+.dk h1,.dk h2{color:#fff}
+h1{font-size:clamp(30px,8vw,48px);line-height:1.15}
+.eyebrow{color:var(--acc);font-weight:700;letter-spacing:.14em;font-size:12px;margin-bottom:12px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:12px}
+.card{background:var(--card);border-radius:14px;padding:16px;transition:transform .2s}
+.card:hover{transform:translateY(-4px)}
+.dk .card{background:rgba(255,255,255,.1)}
+.n{display:inline-flex;width:34px;height:34px;border-radius:50%;background:var(--mid);color:#fff;font-weight:700;align-items:center;justify-content:center;margin-bottom:8px;flex:none}
+.card h3{margin:0 0 4px;font-size:17px;color:var(--head)}
+.dk .card h3{color:#fff}
+.card p{margin:0;font-size:14px;line-height:1.4}
+.mut{color:var(--mut);font-size:13px}
+.big{font-family:Cambria,Georgia,serif;font-size:72px;font-weight:700;color:var(--acc);line-height:1}
+.tabs{display:flex;gap:8px;margin-bottom:14px;flex-wrap:wrap}
+.tab{border:0;border-radius:999px;padding:10px 18px;font:inherit;font-weight:700;background:var(--card);color:var(--head);cursor:pointer}
+.tab.on{background:var(--mid);color:#fff}
+.p{display:none}.p.on{display:block;animation:up .4s both}
+.row{display:flex;gap:12px;background:var(--card);border-radius:12px;padding:12px 14px;margin-bottom:8px;align-items:center}
+.row.b{background:var(--brk);color:var(--mut);font-style:italic}
+.row .t{font-weight:700;min-width:96px;font-size:13px;color:var(--head)}
+.row .m{flex:1;font-size:14px}.row .m small{display:block;color:var(--mut);font-size:12px;margin-top:2px}
+.jp{background:var(--mid);color:#fff;border-radius:999px;padding:3px 10px;font-size:12px;font-weight:700;white-space:nowrap}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:10px}
+.chip{background:var(--mid);color:#fff;border-radius:999px;padding:8px 14px;font-size:13px;font-weight:700}
+details.card{cursor:pointer}summary{display:flex;gap:12px;align-items:center;font-weight:700;color:var(--head);font-size:16px;list-style:none}
+summary::-webkit-details-marker{display:none}
+details p{margin-top:10px;padding-left:46px}
+.step{cursor:pointer}.step.on{outline:3px solid var(--acc)}
+.step .d{max-height:0;overflow:hidden;transition:max-height .35s}.step.on .d{max-height:120px;margin-top:6px}
+.r{opacity:0}.s.on .r{animation:up .6s both;animation-delay:calc(var(--i,0)*90ms)}
+@keyframes up{from{opacity:0;transform:translateY(24px)}to{opacity:1;transform:none}}
+@keyframes fl{50%{transform:translateY(-22px) scale(1.04)}}
+.orb{position:absolute;border-radius:50%;animation:fl 7s ease-in-out infinite;pointer-events:none}
+#nav{position:fixed;left:0;right:0;bottom:0;display:flex;align-items:center;justify-content:center;gap:14px;padding:10px 12px calc(10px + env(safe-area-inset-bottom,0px));background:rgba(11,59,60,.94);color:#fff;z-index:5}
+#nav button{border:0;background:var(--acc);color:#0B3B3C;font-weight:700;font-size:18px;width:44px;height:44px;border-radius:50%;cursor:pointer}
+#nav button:disabled{opacity:.35}
+#dots{display:flex;gap:6px}#dots i{width:8px;height:8px;border-radius:50%;background:#ffffff55;transition:.3s}#dots i.on{background:var(--acc);width:22px;border-radius:6px}
+#bar{position:fixed;top:env(safe-area-inset-top,0px);left:0;height:4px;background:var(--acc);z-index:6;transition:width .5s}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.r{opacity:1}}
+</style>
+</head>
+<body>
+<div id="bar"></div>
+<div id="deck"><div id="track"></div></div>
+<div id="nav"><button id="pv" aria-label="Sebelumnya">‹</button><div id="dots"></div><button id="nx" aria-label="Berikutnya">›</button></div>
+<script>
+const $=(q,e=document)=>e.querySelector(q),$$=(q,e=document)=>[...e.querySelectorAll(q)];
+const R=(i,h,c='')=>`<div class="r ${c}" style="--i:${i}">${h}</div>`;
+const card=(i,n,t,d)=>R(i,`<div class="card" style="height:100%"><span class="n">${n}</span><h3>${t}</h3><p>${d}</p></div>`);
+const tabs=(id,items)=>`<div class="tabs" data-id="${id}">${items.map((x,k)=>`<button class="tab${k?'':' on'}" data-k="${k}">${x[0]}</button>`).join('')}</div>`+items.map((x,k)=>`<div class="p${k?'':' on'}" data-for="${id}" data-k="${k}">${x[1]}</div>`).join('');
+const sched=[
+['Hari 1 · Senin',[['08.00–08.45','Pembukaan dan pengenalan program pelatihan','Rina Anggraini, S.Sos.','1 JP'],['08.45–10.15','Dasar-Dasar Pemasaran Digital Pariwisata (sesi 1)','Andi Pratama, S.Kom.','2 JP'],['10.15–10.30','ISTIRAHAT'],['10.30–12.00','Dasar-Dasar Pemasaran Digital Pariwisata (sesi 2)','Andi Pratama, S.Kom.','2 JP'],['12.00–13.00','ISHOMA (istirahat, salat, makan siang)'],['13.00–15.15','Perencanaan Konten Promosi Pariwisata','Dinda Maharani, S.I.Kom.','3 JP'],['15.15–15.30','ISTIRAHAT'],['15.30–16.00','Rangkuman dan tanya jawab','Tim narasumber']]],
+['Hari 2 · Selasa',[['08.00–09.30','Teknik Copywriting dan Storytelling Pariwisata','Fajar Ramadhan, S.I.Kom.','2 JP'],['09.30–09.45','ISTIRAHAT'],['09.45–11.15','Pengelolaan Media Sosial untuk Promosi Pariwisata','Nadia Putri, S.Sos.','2 JP'],['11.15–12.15','ISHOMA (istirahat, salat, makan siang)'],['12.15–13.45','Praktik Pembuatan Konten Digital Pariwisata (sesi 1)','Dinda Maharani, S.I.Kom.','2 JP'],['13.45–14.00','ISTIRAHAT'],['14.00–15.30','Praktik Pembuatan Konten Digital Pariwisata (sesi 2)','Dinda Maharani, S.I.Kom.','2 JP'],['15.30–16.00','Diskusi singkat dan arahan tugas','Dinda Maharani, S.I.Kom.']]],
+['Hari 3 · Rabu',[['08.00–09.30','Analisis Engagement dan Insight Media Sosial','Andi Pratama, S.Kom.','2 JP'],['09.30–09.45','ISTIRAHAT'],['09.45–11.15','Penyusunan Strategi Promosi Digital Pariwisata','Fajar Ramadhan, S.I.Kom.','2 JP'],['11.15–12.15','ISHOMA (istirahat, salat, makan siang)'],['12.15–13.45','Presentasi Hasil Praktik Pembuatan Konten Digital','Dinda Maharani, S.I.Kom. dan peserta','2 JP'],['13.45–14.00','ISTIRAHAT'],['14.00–15.30','Evaluasi pelatihan, umpan balik, dan rencana tindak lanjut','Rina Anggraini, S.Sos. dan tim narasumber','2 JP'],['15.30–16.00','Penutupan','Panitia penyelenggara']]]];
+const row=x=>x.length<3?`<div class="row b"><span class="t">${x[0]}</span><span class="m">${x[1]}</span></div>`:`<div class="row"><span class="t">${x[0]}</span><span class="m">${x[1]}<small>${x[2]}</small></span>${x[3]?`<span class="jp">${x[3]}</span>`:''}</div>`;
+const mem=[['Marjeni','2430207030050'],['Anisa Ismi Sholehati','2430207030020'],['Desi Natalia','2430207030052'],['Andini Adelia','2430207030036'],['Arbi Maliah','2430207030015'],['Elsa','2430207030013'],['Zahra Rachmawati','2430207030044']];
+const nar=[['Rina Anggraini, S.Sos.','Pengantar pelatihan, evaluasi, dan penutupan kegiatan.'],['Andi Pratama, S.Kom.','Pemasaran digital pariwisata; analisis interaksi dan insight media sosial.'],['Dinda Maharani, S.I.Kom.','Perencanaan konten, praktik pembuatan konten, dan pendampingan peserta.'],['Fajar Ramadhan, S.I.Kom.','Copywriting, storytelling, dan strategi promosi digital.'],['Nadia Putri, S.Sos.','Pengelolaan media sosial dan publikasi informasi pariwisata.']];
+const alur=[['Identifikasi Kebutuhan','Menentukan kompetensi pemasaran digital yang perlu ditingkatkan.'],['Persiapan','Menentukan peserta dan narasumber, menyusun materi dan jadwal, menyiapkan tempat dan fasilitas.'],['Pembukaan','Menyampaikan tujuan pelatihan dan rangkaian kegiatan selama tiga hari.'],['Penyampaian Materi','Pemasaran digital, perencanaan konten, copywriting, storytelling, media sosial, insight, dan strategi promosi.'],['Diskusi dan Praktik','Tanya jawab dengan narasumber dan praktik membuat konten promosi destinasi wisata.'],['Presentasi Hasil','Peserta memaparkan konten promosi untuk mendapat masukan narasumber.'],['Evaluasi','Menilai pemahaman, hasil praktik, dan tanggapan peserta.'],['Tindak Lanjut','Menerapkan pengetahuan dan keterampilan dalam pekerjaan sehari-hari.']];
+const S=[
+`<section class="s dk"><div class="orb" style="width:260px;height:260px;right:-80px;top:-60px;background:#1F7A6B66"></div><div class="orb" style="width:180px;height:180px;right:10%;bottom:12%;background:#F2A43A55;animation-delay:-3s"></div><div class="w" style="min-height:100%;display:flex;flex-direction:column;justify-content:center;position:relative">${R(0,'<div class="eyebrow">TUGAS-2 · PENGEMBANGAN KOMPETENSI ASN</div>')}${R(1,'<h1>Pelatihan Pemasaran Digital dan Promosi Pariwisata bagi ASN</h1>')}${R(2,'<p style="font-size:16px;color:#CFE6E1;line-height:1.5">Bidang Pengembangan Pemasaran Pariwisata<br>Dinas Kebudayaan dan Pariwisata Provinsi Kalimantan Tengah</p>')}${R(3,'<p style="font-weight:700;margin-top:28px">Kelompok Mantap · Mata Kuliah TKSDM</p>')}${R(4,'<p class="mut" style="color:#9ADBCF">Geser atau tekan tombol › untuk lanjut</p>')}</div></section>`,
+`<section class="s"><div class="w">${R(0,'<h2>Kelompok Mantap</h2>')}<div class="grid">${mem.map((m,i)=>R(i+1,`<div class="card" style="display:flex;gap:12px;align-items:center"><span class="n" style="margin:0">${i+1}</span><div><h3 style="margin:0">${m[0]}</h3><span class="mut">NIM ${m[1]}</span></div></div>`)).join('')}</div></div></section>`,
+`<section class="s"><div class="w">${R(0,'<h2>Bentuk Pelaksanaan</h2>')}${R(1,'<div class="card" style="background:#0B3B3C;color:#fff;display:flex;gap:18px;align-items:center;margin-bottom:12px"><span class="big" data-count="3">0</span><div><b style="font-size:18px">hari pelatihan tatap muka</b><br><span style="color:#CFE6E1">Senin–Rabu · 08.00–16.00 WIB</span></div></div>')}<div class="grid">${[['Penyampaian Materi','Dasar pemasaran digital, perencanaan konten, copywriting, dan strategi promosi.'],['Diskusi','Tanya jawab dan pembahasan kendala promosi pariwisata bersama narasumber.'],['Demonstrasi','Contoh nyata pembuatan konten promosi dan pengelolaan media sosial.'],['Praktik Langsung','Membuat konten destinasi wisata, menyusun caption, dan merancang publikasi.']].map((c,i)=>card(i+2,i+1,c[0],c[1])).join('')}</div></div></section>`,
+`<section class="s"><div class="w">${R(0,'<h2>Proses Pelaksanaan</h2>')}${R(1,tabs('pr',[['A · Persiapan','<div class="card"><p>• Identifikasi kebutuhan kompetensi<br>• Penentuan peserta dan narasumber<br>• Penyusunan materi dan jadwal<br>• Persiapan ruangan, proyektor, laptop, dan internet</p></div>'],['B · Pelaksanaan','<div class="card"><p>• Pembukaan kegiatan<br>• Penyampaian materi<br>• Diskusi dan tanya jawab<br>• Praktik pembuatan konten<br>• Presentasi hasil praktik</p></div>'],['C · Evaluasi','<div class="card"><p>• Evaluasi hasil praktik<br>• Umpan balik dari narasumber<br>• Evaluasi kegiatan oleh peserta<br>• Rencana tindak lanjut di tempat kerja</p></div>']]))}</div></section>`,
+`<section class="s"><div class="w">${R(0,'<h2>Jadwal Pelatihan</h2>')}${R(1,tabs('jd',sched.map(d=>[d[0],d[1].map(row).join('')+'<div class="row" style="background:var(--head);color:var(--bg)"><b class="m">Jumlah jam pelajaran terjadwal</b><span class="jp" style="background:var(--acc);color:#0B3B3C">8 JP</span></div>'])))}${R(2,'<p class="mut">Istirahat dan ISHOMA tidak dihitung JP (1 JP = 45 menit). Nama narasumber adalah nama samaran; jadwal merupakan rancangan usulan.</p>')}</div></section>`,
+`<section class="s"><div class="w">${R(0,'<h2>Tempat, Kapasitas, dan Peserta</h2>')}<div class="grid">${R(1,'<div class="card" style="background:#0B3B3C;color:#fff;height:100%"><div class="eyebrow">TEMPAT</div><h3 style="color:#fff;font-family:Cambria,Georgia,serif;font-size:19px">Aula Dinas Kebudayaan dan Pariwisata Provinsi Kalimantan Tengah</h3><p style="color:#CFE6E1;margin-top:8px">Mendukung materi, diskusi kelompok, dan praktik konten digital.</p></div>')}${R(2,'<div class="card" style="height:100%"><div class="eyebrow" style="color:var(--mid)">KAPASITAS</div><span class="big" style="color:var(--mid)" data-count="25">0</span> <b>orang ASN</b><p style="margin-top:8px">PNS dan PPPK. Ideal untuk diskusi, praktik, dan pendampingan.</p></div>')}</div>${R(3,'<div class="card" style="margin-top:12px"><div class="eyebrow" style="color:var(--mid)">PESERTA</div><p>ASN (PNS dan PPPK) bidang Pengembangan Pemasaran Pariwisata, diutamakan yang menangani:</p><div class="chips"><span class="chip">Promosi destinasi wisata</span><span class="chip">Pengelolaan media sosial</span><span class="chip">Publikasi informasi wisata</span><span class="chip">Dokumentasi dan materi promosi</span></div></div>')}</div></section>`,
+`<section class="s"><div class="w">${R(0,'<h2>Narasumber</h2>')}${nar.map((x,i)=>R(i+1,`<details class="card" style="margin-bottom:10px"><summary><span class="n" style="margin:0">${i+1}</span>${x[0]}</summary><p>${x[1]}</p></details>`)).join('')}${R(6,'<p class="mut">Ketuk nama untuk melihat bidang keahlian. Nama narasumber adalah nama samaran untuk keperluan rancangan tugas.</p>')}</div></section>`,
+`<section class="s"><div class="w">${R(0,'<h2>Alur Pelaksanaan</h2>')}<div class="grid">${alur.map((x,i)=>R(i+1,`<div class="card step" style="height:100%"><span class="n">${i+1}</span><h3>${x[0]}</h3><div class="d"><p>${x[1]}</p></div></div>`)).join('')}</div>${R(9,'<p class="mut" style="margin-top:12px">Ketuk setiap langkah untuk melihat penjelasannya.</p>')}</div></section>`,
+`<section class="s dk"><div class="w">${R(0,'<h2>Hasil yang Diharapkan</h2>')}<div class="grid">${['Menyusun rencana konten','Membuat materi promosi digital','Mengelola media sosial','Mengevaluasi respons audiens secara sederhana'].map((t,i)=>R(i+1,`<div class="card" style="height:100%"><span class="n" style="background:var(--acc);color:#0B3B3C">${i+1}</span><h3>${t}</h3></div>`)).join('')}</div>${R(5,'<p style="font-size:17px;line-height:1.5;color:#CFE6E1;margin-top:20px">Hasil praktik peserta berupa konten promosi destinasi wisata yang dapat dikembangkan untuk mendukung promosi pariwisata Kalimantan Tengah.</p>')}</div></section>`];
+$('#track').innerHTML=S.join('');
+const sl=$$('.s'),N=sl.length;let c=0;
+$('#dots').innerHTML=sl.map(()=>'<i></i>').join('');
+function count(el){const to=+el.dataset.count,t0=performance.now();(function f(t){const k=Math.min(1,(t-t0)/900);el.textContent=Math.round(to*k);if(k<1)requestAnimationFrame(f)})(t0)}
+function go(n){c=Math.max(0,Math.min(N-1,n));$('#track').style.transform=`translateX(-${c*100}%)`;
+sl.forEach((s,i)=>{s.classList.toggle('on',i===c)});
+$$('#dots i').forEach((d,i)=>d.classList.toggle('on',i===c));
+$('#bar').style.width=((c+1)/N*100)+'%';$('#pv').disabled=c===0;$('#nx').disabled=c===N-1;
+$$('[data-count]',sl[c]).forEach(count)}
+$('#pv').onclick=()=>go(c-1);$('#nx').onclick=()=>go(c+1);
+addEventListener('keydown',e=>{if(e.key==='ArrowRight'||e.key===' ')go(c+1);if(e.key==='ArrowLeft')go(c-1)});
+let sx,sy;addEventListener('touchstart',e=>{sx=e.touches[0].clientX;sy=e.touches[0].clientY},{passive:true});
+addEventListener('touchend',e=>{const dx=e.changedTouches[0].clientX-sx,dy=e.changedTouches[0].clientY-sy;if(Math.abs(dx)>60&&Math.abs(dx)>Math.abs(dy)*1.5)go(c+(dx<0?1:-1))},{passive:true});
+document.addEventListener('click',e=>{const t=e.target.closest('.tab');if(t){const id=t.parentNode.dataset.id;$$('.tab',t.parentNode).forEach(b=>b.classList.toggle('on',b===t));$$(`[data-for="${id}"]`).forEach(p=>p.classList.toggle('on',p.dataset.k===t.dataset.k))}
+const st=e.target.closest('.step');if(st)st.classList.toggle('on')});
+go(0);
+</script>
+</body>
+</html>
